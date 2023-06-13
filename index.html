@@ -120,6 +120,15 @@ click on arduino > program file > browse select hex file in folder > ok
 click on play
 ======================================================================================
 
+haar cascade
+import cv2
+img=cv2.imread('test.jpg')
+gray_img=cv2cvtColor(img,cv2.COLOR_BGR2GRAY)
+haar_cascade=cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+eye_cascade=cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_eye.xml")
+faces_react=haar_cascade.detectMultiScale(gray_img,1.3,5)
+eyes=eye_cascade.detectMultiScale(gray_img)
+
 </pre>
 <body>
 </html>
